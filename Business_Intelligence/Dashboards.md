@@ -168,3 +168,9 @@ FROM DONOR d
 LEFT JOIN DONATION dn ON d.donorID = dn.donorID AND dn.status = 'Approved'
 GROUP BY d.bloodType
 ORDER BY donor_count DESC;
+
+
+
+
+
+
