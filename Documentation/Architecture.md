@@ -46,3 +46,32 @@ CREATE TABLE fact_request (
     urgency VARCHAR(20),
     fulfillment_time_hours DECIMAL(5,2)
 );
+-- Dimension Tables
+CREATE TABLE dim_date (
+    date_key INT PRIMARY KEY,
+    full_date DATE,
+    day_number INT,
+    week_number INT,
+    month_number INT,
+    quarter_number INT,
+    year_number INT,
+    is_weekend CHAR(1),
+    is_holiday CHAR(1),
+    holiday_name VARCHAR(50)
+);
+
+CREATE TABLE dim_donor (
+    donor_key INT PRIMARY KEY,
+    donor_id INT,
+    blood_type VARCHAR(5),
+    age_group VARCHAR(20),
+    gender CHAR(1),
+    location VARCHAR(100),
+    donor_segment VARCHAR(30),
+    first_donation_date DATE,
+    last_donation_date DATE,
+    total_donations INT
+);
+
+
+
