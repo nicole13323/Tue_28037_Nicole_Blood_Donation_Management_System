@@ -34,18 +34,6 @@ Transform transactional blood donation data into strategic insights that:
 ---
 
 
-| **Donor Satisfaction Score** | `(Survey Score / Total Possible) × 100` | > 85% | < 75% |
-| **Eligible Donor Pool** | `COUNT(Donors eligible to donate today)` | > 500 | < 300 |
-
-### 2.4 Financial & Compliance KPIs
-| KPI | Calculation | Target | Alert Threshold |
-|-----|-------------|---------|-----------------|
-| **Cost per Unit** | `Total Operational Cost / Units Processed` | < RWF 15,000 | > RWF 18,000 |
-| **Regulatory Compliance** | `(Compliant Processes / Total Processes) × 100` | 100% | < 99% |
-| **Audit Resolution Time** | `AVG(Resolution Date - Audit Date)` | < 3 days | > 5 days |
-| **Data Accuracy Rate** | `(Accurate Records / Total Records) × 100` | > 99.9% | < 99.5% |
-
----
 
 ## 3. DASHBOARD SPECIFICATIONS
 
