@@ -4,8 +4,8 @@
 A comprehensive Oracle PL/SQL database solution for managing blood donation, inventory, and distribution processes with advanced auditing and business intelligence capabilities.
 
 ## Student Information
-- **Name:** [IRADUKUNDA Nicole]
-- **Student ID:** [28037]
+- **Name:IRADUKUNDA Nicole
+- **Student ID: 28037
 - **Course:** Database Development with PL/SQL (INSY 8311)
 - **Institution:** Adventist University of Central Africa (AUCA)
 - **Lecturer:** Eric Maniraquha
