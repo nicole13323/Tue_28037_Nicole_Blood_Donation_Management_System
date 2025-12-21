@@ -35,33 +35,6 @@ Transform transactional blood donation data into strategic insights that:
 
 
 
-## 3. DASHBOARD SPECIFICATIONS
-
-### 3.1 Executive Command Center
-**Purpose:** Strategic overview for senior management
-**Refresh Rate:** Real-time (15-minute intervals)
-**Primary Users:** Medical Director, Blood Bank Manager
-
-**Widgets & Visualizations:**
-1. **KPI Summary Cards** (6 cards)
-   - Current Available Inventory (liters)
-   - Today's Donations Count
-   - Pending Critical Requests
-   - Month-to-date Fulfillment Rate
-   - Current Wastage Rate
-   - System Health Status
-
-2. **Supply-Demand Balance Chart**
-   - Line chart: Daily donations vs. requests (30-day trend)
-   - Area chart: Inventory levels by blood type
-
-3. **Geographic Heat Map**
-   - Hospital locations with request volumes
-   - Donation center performance metrics
-
-4. **Alert Ticker**
-   - Real-time alerts for critical thresholds
-   - Expiry warnings (24-hour notice)
 
 ### 3.2 Inventory Control Dashboard
 **Purpose:** Daily operational management
