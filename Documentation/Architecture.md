@@ -22,3 +22,27 @@ CREATE TABLE fact_donation (
     blood_type_key INT,
     quantity_ml DECIMAL(10,2),
     test_result VARCHAR(20),
+ status VARCHAR(20)
+);
+
+CREATE TABLE fact_inventory (
+    inventory_key INT PRIMARY KEY,
+    date_key INT,
+    donation_key INT,
+    blood_type_key INT,
+    location_key INT,
+    quantity_ml DECIMAL(10,2),
+    days_to_expiry INT,
+    status VARCHAR(20)
+);
+
+CREATE TABLE fact_request (
+    request_key INT PRIMARY KEY,
+    date_key INT,
+    hospital_key INT,
+    inventory_key INT,
+    blood_type_key INT,
+    quantity_ml DECIMAL(10,2),
+    urgency VARCHAR(20),
+    fulfillment_time_hours DECIMAL(5,2)
+);
