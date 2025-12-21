@@ -71,6 +71,14 @@ CREATE TABLE dim_donor (
     first_donation_date DATE,
     last_donation_date DATE,
     total_donations INT
+);CREATE TABLE dim_hospital (
+    hospital_key INT PRIMARY KEY,
+    hospital_id INT,
+    name VARCHAR(100),
+    type VARCHAR(30),
+    location VARCHAR(100),
+    bed_count INT,
+    contact_person VARCHAR(100)
 );
 
 
