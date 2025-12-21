@@ -60,4 +60,41 @@ END log_audit_trail;
 ---and then Create Restriction Check Function
     
     
-    SELECT audit_seq.NEXTVAL INTO v_audit_id FROM DUAL;
+  -- Test  Check successful audit entries
+SELECT 
+    auditID,
+    table_name,
+    operation_type,
+    record_id,
+    TO_CHAR(operation_date, 'DD-MON-YYYY HH24:MI:SS') AS operation_time,
+    status,
+    error_message
+FROM AUDIT_LOG
+ORDER BY auditID DESC;
+-- Test : Test BLOOD_INVENTORY audit trigger
+BEGIN
+    -- This should be logged
+    UPDATE BLOOD_INVENTORY
+    SET status = 'Reserved'
+    WHERE inventoryID = 1;
+    
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Update completed - check audit log');
+END;
+/
+-- Test : Check audit log for denied attempt
+SELECT * FROM AUDIT_LOG 
+WHERE status = 'DENIED'
+ORDER BY operation_date DESC;
+-- : Audit Summary by Day
+SELECT 
+    TRUNC(operation_date) AS audit_date,
+    table_name,
+    operation_type,
+    status,
+    COUNT(*) AS operation_count,
+    LISTAGG(DISTINCT user_name, ', ') WITHIN GROUP (ORDER BY user_name) AS users
+FROM AUDIT_LOG
+WHERE operation_date >= SYSDATE - 30
+GROUP BY TRUNC(operation_date), table_name, operation_type, status
+ORDER BY audit_date DESC, table_name;
