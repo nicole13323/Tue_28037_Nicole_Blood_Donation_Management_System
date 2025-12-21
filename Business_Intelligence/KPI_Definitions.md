@@ -24,3 +24,16 @@
 | **Donor Retention Rate** | `(Repeat Donors / Total Donors) × 100` | > 60% | < 50% |
 | **New Donor Acquisition** | `COUNT(Donors with first donation in last 30 days)` | > 100/month | < 75/month |
 | **Donor Return Interval** | `AVG(Days between donations for repeat donors)` | < 90 days | > 120 days |
+| **Donor Satisfaction Score** | `(Survey Score / Total Possible) × 100` | > 85% | < 75% |
+| **Eligible Donor Pool** | `COUNT(Donors eligible to donate today)` | > 500 | < 300 |
+
+### 2.4 Financial & Compliance KPIs
+| KPI | Calculation | Target | Alert Threshold |
+|-----|-------------|---------|-----------------|
+| **Cost per Unit** | `Total Operational Cost / Units Processed` | < RWF 15,000 | > RWF 18,000 |
+| **Regulatory Compliance** | `(Compliant Processes / Total Processes) × 100` | 100% | < 99% |
+| **Audit Resolution Time** | `AVG(Resolution Date - Audit Date)` | < 3 days | > 5 days |
+| **Data Accuracy Rate** | `(Accurate Records / Total Records) × 100` | > 99.9% | < 99.5% |
+
+---
+
